@@ -1,16 +1,29 @@
-# recipe_app
+# Recipes App Project
+ 
+An android and iOS app to list and showcase a number of meals and their recipes, built on flutter and dart.
 
-A new Flutter project.
+## Features 
+ - Multple Screens
+ - Favorite button to mark and save your favourite recipes
+ - Categories Tab to list particular meals under different categories
+ - Filter feature
 
-## Getting Started
+## Tools
+- Flutter v2.2.2 SDK
+- Dart 2.13.3
+- Editor (VS Code or Android Studio)
 
-This project is a starting point for a Flutter application.
+## Instructions
 
-A few resources to get you started if this is your first Flutter project:
+All dart scripts are located inside the lib folder.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Widgets are inside Expense-Manager-App/lib/widgets/
+- Simple object models are in Expense-Manager-App/lib/models/
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+To run this app on a virtual machine (mobile emulator), your android device or your web browser, just clone the project, open your terminal inside that folder and use this command: 
+```
+flutter run
+```
+(Must have flutter in the system PATH, and USB Debugging enabled if you're using an Andriod device)
+
+- Note: Project is under development at this stage
