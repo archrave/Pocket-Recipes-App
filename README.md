@@ -3,7 +3,7 @@
 An android and iOS app to list and showcase a number of meals and their recipes, built on flutter and dart.
 
 ## Features 
- - Multple Screens
+ - Multiple Screens
  - Favorite button to mark and save your favourite recipes
  - Categories Tab to list particular meals under different categories
  - Filter feature
