@@ -11,9 +11,14 @@ class CategoryItem extends StatelessWidget {
     // Navigator feature HELPS to navigate between screens
     // Adds another screen on top of the screen before, like a stack
     // Screens are practically alligned using stack
-    Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return MealsScreen(id, title);
-    }));
+    //Following is the direct method for Navigating to other screens
+
+    /*    Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
+            return MealsScreen(id, title);
+       }));     */
+
+    Navigator.of(ctx)
+        .pushNamed('/meals-screen', arguments: {'id': id, 'title': title});
   }
 
   @override
