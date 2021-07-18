@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import './meals_screen.dart';
 
 class CategoryItem extends StatelessWidget {
-  final String itemTitle;
-  final Color itemColor;
-
-  CategoryItem({this.itemTitle, this.itemColor});
+  final String title;
+  final Color color;
+  final String id;
+  CategoryItem({this.id, this.title, this.color});
 
   void selectCategory(BuildContext ctx) {
     // Navigator feature HELPS to navigate between screens
     // Adds another screen on top of the screen before, like a stack
     // Screens are practically alligned using stack
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return MealsScreen();
+      return MealsScreen(id, title);
     }));
   }
 
@@ -27,12 +27,12 @@ class CategoryItem extends StatelessWidget {
           BorderRadius.circular(15), //To match the shape of container below
       child: Container(
         padding: const EdgeInsets.all(20),
-        child: Text(itemTitle),
+        child: Text(title),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              itemColor.withOpacity(0.7),
-              itemColor,
+              color.withOpacity(0.7),
+              color,
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
