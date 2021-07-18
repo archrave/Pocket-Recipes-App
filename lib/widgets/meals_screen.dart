@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import '../dummy_data.dart';
 
 class MealsScreen extends StatelessWidget {
+  static const String routeName =
+      '/meals-screen'; //WIll be using this in the main.dart
+
   // final String categoryId;
   // final String categoryTitle;
   // MealsScreen(this.categoryId, this.categoryTitle);
@@ -12,11 +16,21 @@ class MealsScreen extends StatelessWidget {
     final categoryId = routeArgs['id'];
     final categoryTitle = routeArgs['title'];
 
+    /* Below we're filtering out the meals for the selected category by 
+    checking all the meals' categoryList argument, if it contains the categoryId that we selected */
+
+    final categoryMeals = DUMMY_MEALS.where((eachMeal) {
+      return eachMeal.categories.contains(categoryId);
+    }).toList();
     return Scaffold(
       appBar: AppBar(
         title: Text(categoryTitle),
       ),
-      body: Container(),
+      body: ListView.builder(
+          itemBuilder: (ctx, index) {
+            return Text(categoryMeals[index].title);
+          },
+          itemCount: categoryMeals.length),
     );
   }
 }

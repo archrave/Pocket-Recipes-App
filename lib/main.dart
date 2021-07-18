@@ -25,7 +25,10 @@ class MyApp extends StatelessWidget {
                   fontFamily: 'RobotoCondensed'))),
       home: CategoriesScreen(),
       routes: {
-        '/meals-screen': (ctx) => MealsScreen(),
+        //    '/meals-screen': (ctx) => MealsScreen(),
+        // Better way is to store this random name in the given widget class itself
+
+        MealsScreen.routeName: (ctx) => MealsScreen(),
       },
     );
   }
