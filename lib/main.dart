@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
           textTheme: ThemeData.light().textTheme.copyWith(
               body1: TextStyle(
                   fontFamily: 'Raleway',
-                  fontSize: 20,
+                  fontSize: 18,
                   color: Color.fromRGBO(20, 51, 51, 1)),
               body2:
                   TextStyle(fontSize: 10, color: Color.fromRGBO(20, 51, 51, 1)),

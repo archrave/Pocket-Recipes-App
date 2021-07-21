@@ -8,6 +8,38 @@ class MealItem extends StatelessWidget {
   final Complexity mealComplexity;
   final Affordability mealAffordability;
 
+  String get complexityText {
+    switch (mealComplexity) {
+      case Complexity.Simple:
+        return 'Simple';
+        break;
+      case Complexity.Challenging:
+        return 'Challenging';
+        break;
+      case Complexity.Hard:
+        return 'Hard';
+        break;
+      default:
+        return 'Unknown';
+    }
+  }
+
+  String get affordabilityText {
+    switch (mealAffordability) {
+      case Affordability.Affordable:
+        return 'Affordable';
+        break;
+      case Affordability.Pricey:
+        return 'Pricey';
+        break;
+      case Affordability.Luxurious:
+        return 'Luxurious';
+        break;
+      default:
+        return 'Unknown';
+    }
+  }
+
   MealItem(
       {@required this.mealTitle,
       @required this.imgUrl,
@@ -44,19 +76,47 @@ class MealItem extends StatelessWidget {
                   ),
                   Positioned(
                     bottom: 20,
-                    left: 10,
-                    child: Text(
-                      mealTitle,
-                      style: TextStyle(
-                        fontSize: 26,
-                        color: Colors.white,
+                    left: 1,
+                    child: Container(
+                      width: 300,
+                      color: Colors.black54,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                      child: Text(
+                        mealTitle,
+                        style: TextStyle(
+                          fontSize: 26,
+                          color: Colors.white,
+                        ),
+                        softWrap: true,
+                        overflow: TextOverflow.fade,
                       ),
-                      softWrap: true,
-                      overflow: TextOverflow.fade,
                     ),
                   ),
                 ],
-              )
+              ),
+              Container(
+                  padding: EdgeInsets.all(20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Row(children: [
+                        Icon(Icons.schedule),
+                        SizedBox(width: 6),
+                        Text('$mealDuration min'),
+                      ]),
+                      Row(children: [
+                        Icon(Icons.work),
+                        SizedBox(width: 6),
+                        Text(complexityText),
+                      ]),
+                      Row(children: [
+                        Icon(Icons.money),
+                        SizedBox(width: 6),
+                        Text('$affordabilityText'),
+                      ]),
+                    ],
+                  ))
             ],
           ),
         ));
