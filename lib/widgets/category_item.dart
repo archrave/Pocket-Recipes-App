@@ -32,7 +32,10 @@ class CategoryItem extends StatelessWidget {
           BorderRadius.circular(15), //To match the shape of container below
       child: Container(
         padding: const EdgeInsets.all(20),
-        child: Text(title),
+        child: Text(
+          title,
+          style: Theme.of(context).textTheme.title,
+        ),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [

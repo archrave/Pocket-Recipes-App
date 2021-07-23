@@ -76,6 +76,12 @@ flutter:
           weight: 300
         - asset: fonts/RobotoCondensed-Italic.ttf
           style: italic
-  #
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Regular.ttf
+        - asset: fonts/Roboto-Light.ttf
+          weight: 300
+       
+  
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
