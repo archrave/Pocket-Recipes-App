@@ -35,13 +35,12 @@ An android and iOS app to list and showcase a number of meals and their recipes,
 
 All dart scripts are located inside the lib folder.
 
-- Widgets are inside Expense-Manager-App/lib/widgets/
-- Simple object models are in Expense-Manager-App/lib/models/
+- Widgets are inside Recipes-App/lib/widgets/
+- Simple object models are in Recipes-App/lib/models/
+- Dummy data used is in a separate .dart file in the root directory ./dummy_data.dart
 
 To run this app on a virtual machine (mobile emulator), your android device or your web browser, just clone the project, open your terminal inside that folder and use this command: 
 ```
 flutter run
 ```
 (Must have flutter in the system PATH, and USB Debugging enabled if you're using an Andriod device)
-
-- Note: Project is under development at this stage
