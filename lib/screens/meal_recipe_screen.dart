@@ -26,7 +26,7 @@ class MealRecipe extends StatelessWidget {
         margin: EdgeInsets.all(10),
         padding: EdgeInsets.all(10),
         height: 280,
-        width: 380,
+        width: 350,
         child: child,
       );
     }

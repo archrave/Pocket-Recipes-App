@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './screens/meal_recipe_screen.dart';
 import './screens/categories_screen.dart';
 import './screens/meals_screen.dart';
+import './screens/tabs_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
                   fontSize: 22,
                   //fontWeight: FontWeight.bold,
                   fontFamily: 'Roboto'))),
-      home: CategoriesScreen(),
+      home: TabsScreen(),
       routes: {
         //    '/meals-screen': (ctx) => MealsScreen(),
         // Better way is to store this random name in the given widget class itself
