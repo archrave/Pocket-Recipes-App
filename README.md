@@ -13,6 +13,21 @@ An android and iOS app to list and showcase a number of meals and their recipes,
 - Dart 2.13.3
 - Editor (VS Code or Android Studio)
 
+## Preview
+<p align="center">
+ <img src="./screenshots/pocketrecipes (1).png" width="300" title="hover text">
+
+ <img src="./screenshots/pocketrecipes (2).png" width="350" title="hover text">
+ 
+ <img src="./screenshots/pocketrecipes (3).png" width="300" title="hover text">
+
+ <img src="./screenshots/pocketrecipes (4).png" width="300" title="hover text">
+
+ <img src="./screenshots/pocketrecipes (5).png" width="300" title="hover text">
+ 
+ <img src="./screenshots/pocketrecipes (6).png" width="300" title="hover text">
+</p>
+
 ## Instructions
 
 All dart scripts are located inside the lib folder.
