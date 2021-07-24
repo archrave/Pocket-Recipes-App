@@ -19,12 +19,13 @@ An android and iOS app to list and showcase a number of meals and their recipes,
    <img src="./screenshots/pocketrecipes (1).png" width="300" title="hover text">
 &nbsp;
    <img src="./screenshots/pocketrecipes (2).png" width="300" title="hover text">
-&nbsp;
+<br />
+<br />
    <img src="./screenshots/pocketrecipes (3).png" width="300" title="hover text">
-<br />
-<br />
-   <img src="./screenshots/pocketrecipes (4).png" width="300" title="hover text">
 &nbsp;
+   <img src="./screenshots/pocketrecipes (4).png" width="300" title="hover text">
+<br />
+<br />
    <img src="./screenshots/pocketrecipes (5).png" width="300" title="hover text">
 &nbsp;
    <img src="./screenshots/pocketrecipes (6).png" width="300" title="hover text">
