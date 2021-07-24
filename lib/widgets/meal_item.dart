@@ -52,6 +52,7 @@ class MealItem extends StatelessWidget {
   void selectMeal(BuildContext ctx) {
     Navigator.of(ctx).pushNamed('/recipe-screen',
         arguments: {'id': mealId, 'title': mealTitle});
+    print(mealId);
   }
 
   @override

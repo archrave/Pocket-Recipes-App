@@ -34,6 +34,18 @@ class MyApp extends StatelessWidget {
         MealsScreen.routeName: (ctx) => MealsScreen(),
         MealRecipe.routeName: (ctx) => MealRecipe(),
       },
+
+      //Following function is used to navigate to the specified screen(Categories Screen here), if a route isnt registered above
+      onGenerateRoute: (settings) {
+        print(settings.arguments);
+        return MaterialPageRoute(builder: (_) => CategoriesScreen());
+      },
+
+      //Following function is a last resort to prevent errors while navigating
+      //Much like a 404 error page in a website
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (_) => CategoriesScreen());
+      },
     );
   }
 }
