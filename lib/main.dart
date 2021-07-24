@@ -3,6 +3,7 @@ import './screens/meal_recipe_screen.dart';
 import './screens/categories_screen.dart';
 import './screens/meals_screen.dart';
 import './screens/tabs_screen.dart';
+import './screens/filters_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,13 +28,16 @@ class MyApp extends StatelessWidget {
                   fontSize: 22,
                   //fontWeight: FontWeight.bold,
                   fontFamily: 'Roboto'))),
-      home: TabsScreen(),
+      // home: TabsScreen(),
+      initialRoute: '/',
       routes: {
+        '/': (ctx) => TabsScreen(),
         //    '/meals-screen': (ctx) => MealsScreen(),
         // Better way is to store this random name in the given widget class itself
 
         MealsScreen.routeName: (ctx) => MealsScreen(),
         MealRecipe.routeName: (ctx) => MealRecipe(),
+        FiltersScreen.routeName: (ctx) => FiltersScreen(),
       },
 
       //Following function is used to navigate to the specified screen(Categories Screen here), if a route isnt registered above
