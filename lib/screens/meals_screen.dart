@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/widgets/meal_item.dart';
-import '../dummy_data.dart';
 import '../models/meal.dart';
 
 class MealsScreen extends StatefulWidget {
   static const String routeName = '/meals-screen';
+  List<Meal> availableMeals;
+  MealsScreen(this.availableMeals);
+
   @override
   _MealsScreenState createState() => _MealsScreenState();
 }
@@ -29,7 +31,7 @@ class _MealsScreenState extends State<MealsScreen> {
       /* Below we're filtering out the meals for the selected category by 
     checking all the meals' categoryList argument, if it contains the categoryId that we selected */
 
-      displayedMeals = DUMMY_MEALS.where((eachMeal) {
+      displayedMeals = widget.availableMeals.where((eachMeal) {
         return eachMeal.categories.contains(categoryId);
       }).toList();
       super.didChangeDependencies();

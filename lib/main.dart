@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './dummy_data.dart';
+import './models/meal.dart';
 import './screens/meal_recipe_screen.dart';
 import './screens/categories_screen.dart';
 import './screens/meals_screen.dart';
@@ -9,7 +11,42 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  List<Meal> _availableMeals = DUMMY_MEALS;
+
+  Map<String, bool> _filters = {
+    'gluten': false,
+    'lactose': false,
+    'vegan': false,
+    'vegetarian': false,
+  };
+
+  void setFilters(Map<String, bool> filterData) {
+    setState(() {
+      _filters = filterData;
+      _availableMeals = DUMMY_MEALS.where((element) {
+        if (_filters['gluten'] && !element.isGlutenFree) {
+          return false;
+        }
+        if (_filters['lactose'] && !element.isLactoseFree) {
+          return false;
+        }
+        if (_filters['vegetarian'] && !element.isVegetarian) {
+          return false;
+        }
+        if (_filters['vegan'] && !element.isVegan) {
+          return false;
+        } else
+          return true;
+      }).toList();
+    });
+  }
+
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Pocket Recipes',
@@ -35,9 +72,9 @@ class MyApp extends StatelessWidget {
         //    '/meals-screen': (ctx) => MealsScreen(),
         // Better way is to store this random name in the given widget class itself
 
-        MealsScreen.routeName: (ctx) => MealsScreen(),
+        MealsScreen.routeName: (ctx) => MealsScreen(_availableMeals),
         MealRecipe.routeName: (ctx) => MealRecipe(),
-        FiltersScreen.routeName: (ctx) => FiltersScreen(),
+        FiltersScreen.routeName: (ctx) => FiltersScreen(_filters, setFilters),
       },
 
       //Following function is used to navigate to the specified screen(Categories Screen here), if a route isnt registered above
