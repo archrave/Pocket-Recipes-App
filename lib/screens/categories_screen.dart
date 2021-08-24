@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import '../widgets/category_item.dart';
-// import '../models/meal.dart';
 import '../dummy_data.dart';
 
 class CategoriesScreen extends StatelessWidget {
-  // static const routeName = '/category-screen';
-  // List<Meal> availableMeals;
-  // CategoriesScreen(this.availableMeals);
   @override
   Widget build(BuildContext context) {
     return
