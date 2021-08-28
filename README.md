@@ -1,4 +1,4 @@
-# Recipes App Project
+# Pocket Recipes App Project
  
 An android and iOS app to list and showcase a number of meals and their recipes, built on flutter and dart.
 
